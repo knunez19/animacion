@@ -1,0 +1,105 @@
+* { box-sizing: border-box;}
+
+.ground {
+  animation: move 10s steps(1) infinite forwards;
+}
+
+.background {
+  animation: move 10s steps(1) infinite forwards;
+}
+
+.stickman {
+  animation: walk 1s steps(8) infinite forwards, move 10s steps(1000) infinite forwards;
+}
+
+.pajaros {
+  animation: slide-left 10s steps(1000) infinite forwards, down-up 10s steps(1000) infinite forwards;
+}
+
+.other-cloud {
+  animation: slide-left 7s steps(1000) infinite forwards, down-up 5s steps(1000) infinite forwards;
+}
+
+.big-cloud {
+  animation: slide-left 5s steps(1000) infinite forwards, down-up 10s steps(1000) infinite forwards;
+}
+
+@keyframes move {
+  100% { margin-left: 110vw; }
+}
+
+@keyframes walk {
+  100% { background-position: -256px 0px;  }
+}
+
+@keyframes jump {
+  50% { bottom: 226px; }
+  100% { bottom: 113px; }
+}
+
+@keyframes slide-left {
+  100% { margin-right: 1024px; }
+}
+
+@keyframes down-up {
+  50% { margin-top: 200px;}
+  100% { margin-top: 0px; }
+}
+
+.background {
+  background-image: url("imagenes/bosque.png");
+  width: 640px;
+  height: 400px;
+  border: thin solid black;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: skyblue;
+  margin: 0 auto;
+}
+
+.ground {
+  width: 1680px;
+  height: 113px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.stickman {
+  background-image: url("imagenes/caminar.png");
+  transform: scale(3);
+  bottom: 0;
+  left: 0;
+  width: 32px;
+  height: 23px;
+  position: absolute;
+  bottom: 113px;
+  margin-left: -175px;
+  margin-bottom: -70px;
+}
+
+.pajaros {
+  background-image: url("imagenes/pajaros.gif");
+  width: 300px;
+  height: 464px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin-right: -180px;
+}
+
+.big-cloud {
+  background-image: url("images/super-mario/big-cloud.png");
+  width: 301px;
+  height: 113px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin-right: -302px;
+}
+
+.other-cloud {
+  top: 100px;
+  right: 100px;
+}
